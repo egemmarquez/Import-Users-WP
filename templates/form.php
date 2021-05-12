@@ -7,10 +7,10 @@
 <th>User</th>
 <th>Password</th>
 </tr><tr>
-<th><input name="host" value="localhost" type="text"></th>
-<th><input name="dbname" value="testdb" type="text"></th>
-<th><input name="user" value="root" type="text"></th>
-<th><input name="password" value="mysql" type="text"></th>
+<th><input name="host"  type="text"></th>
+<th><input name="dbname" type="text"></th>
+<th><input name="user"  type="text"></th>
+<th><input name="password"  type="text"></th>
 </table>
 <br><br>
 <h2>Users table</h2>
@@ -20,7 +20,7 @@
 </th>
 </tr><tr>
 <th>
-<input name="table" value="table1" type="text">
+<input name="table"  type="text">
 </th>
 </table>
 <br>
@@ -29,8 +29,8 @@
 <th>username</th>
 <th>password</th>
 </tr><tr>
-<th><input name="import_user" value="Name" type="text"></th>
-<th><input name="import_password" value="id" type="text"></th>
+<th><input name="import_user" type="text"></th>
+<th><input name="import_password" type="text"></th>
 </table>
 </table>
 <table width="50%" border="0">
