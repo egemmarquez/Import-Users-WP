@@ -1,13 +1,13 @@
 <?php
 /**
  * @package importdennis
- * @version 0.0.1
+ * @version 0.9.5
  */
 /*
 Plugin Name: Import Users Development Plugin
 Plugin URI: github.com/egempiu
 Description: Plugin developed to import users from DENNISDB to Wordpress.
-Version: 0.8.1
+Version: 0.9.5
 Author URI: github.com/egempiu
 */
 
@@ -28,24 +28,20 @@ function custom_menu() {
 function index_callback() {
   if (is_admin() ) {
       // we are in admin mode
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
+
       require_once __DIR__ . '/classes.php';
       require_once __DIR__ . '/templates/index.php';
       if(!$_POST) {
       require_once __DIR__ . '/templates/form.php';
-      }
-        else {
+      } else {
           $formdb = new importdb;
           $users = $formdb->get_users($_POST);
-          echo '<div style="overflow:scroll; border:1px solid #000; margin-top:30px; width:50%; height:300px;">';
+          echo '<div style="overflow:scroll; border:1px solid #000; margin-top:30px; width:50%; height:300px; padding:5px;">';
           $formdb->create_userswp($users);
           echo "</div>";
           // code...
-
-
-
         }
 
   }
